@@ -1,0 +1,35 @@
+{
+  "title": "DMH→DMTH 全链修正 2026-06-26",
+  "files": [
+    {
+      "path": "D:/FIBEMATE/lookingglass/paper/paper_main.tex",
+      "sha256": "f41293f5533200f21704a493c63e507542e2e716128a12acda719209a6a5b4cc",
+      "size": 24323
+    },
+    {
+      "path": "D:/FIBEMATE/lookingglass/paper/paper_main.pdf",
+      "sha256": "20aaed4c55ebb12c60c093dd78292d5a3ab8ed8d9631088f7072cff6840cdfd8",
+      "size": 361473
+    },
+    {
+      "path": "D:/FIBEMATE/07_Electron_D盘原/README.md",
+      "sha256": "07a9eb2ae0f3265f739e9ca4a3688ce44bc48e440d1f9764acb56bca145b030d",
+      "size": 5262
+    },
+    {
+      "path": "D:/FIBEMATE/02_项目档案_E盘/01_最终交付/FIBEMATE_最终项目/ARCHITECTURE.md",
+      "sha256": "a77098d1858c382c2d32a19974f67f7fa3d93e51c42d988dc2c3549d70b8290e",
+      "size": 6330
+    },
+    {
+      "path": "D:/FIBEMATE/07_Electron_D盘原/src/modules/pqc-init.js",
+      "sha256": "b59301012e509c8e8d4c759776e71b8055d228446f74520efd2393b60bb157fe",
+      "size": 3811
+    },
+    {
+      "path": "D:/FIBEMATE/07_Electron_D盘原/src/modules/lg-keyexchange.js",
+      "sha256": "95eb165c69c177fc5af2a30c21e2a539f66cdd18d4bbaf075f18a4d63fe0c884",
+      "size": 3265
+    }
+  ]
+}

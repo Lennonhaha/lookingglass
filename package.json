@@ -1,0 +1,27 @@
+{
+  "name": "lookingglass",
+  "version": "0.1.0",
+  "description": "Infinite mirror layered trapdoor architecture over lattice tensors",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
+    "test:ci": "jest --ci --coverage --maxWorkers=2"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coverageDirectory": "coverage",
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/**/*.test.js"
+    ],
+    "testMatch": [
+      "**/tests/**/*.test.js"
+    ],
+    "verbose": true
+  },
+  "license": "GPL-3.0-only",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}

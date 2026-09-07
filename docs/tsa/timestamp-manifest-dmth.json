@@ -1,0 +1,11 @@
+{
+  "title": "DMH→DMTH 全链修正 2026-06-26",
+  "files": [
+    {"id":"lg-dmth-01", "path":"paper/paper_main.tex", "note":"arXiv 预印本 v2 — DMH→DMTH 模型修正版"},
+    {"id":"lg-dmth-02", "path":"paper/paper_main.pdf", "note":"DMTH 论文 PDF (5pp, 361KB)"},
+    {"id":"lg-dmth-03", "path":"../07_Electron_D盘原/README.md", "note":"FIBEMATE README DMH→DMTH 更新"},
+    {"id":"lg-dmth-04", "path":"../02_项目档案_E盘/01_最终交付/FIBEMATE_最终项目/ARCHITECTURE.md", "note":"ARCHITECTURE.md DMH→DMTH 更新"},
+    {"id":"lg-dmth-05", "path":"../07_Electron_D盘原/src/modules/pqc-init.js", "note":"pqc-init.js 双线安全输出"},
+    {"id":"lg-dmth-06", "path":"../07_Electron_D盘原/src/modules/lg-keyexchange.js", "note":"lg-keyexchange.js DMH→DMTH 注释"}
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "experiment": "Mixer Randomization Test",
+  "timestamp": "2026-06-26T12:15:46.416Z",
+  "q": 3329,
+  "samples": 20000,
+  "results": [
+    {
+      "name": "kron(A,I₂) [ORIGINAL]",
+      "n": 8,
+      "k": 2,
+      "chi2": "16575227",
+      "cohens_w": "28.7882",
+      "zero_ratio": "1661.670",
+      "passed": false,
+      "elapsed_s": 2.2
+    },
+    {
+      "name": "kron(A,R_rand) [FIX-A]",
+      "n": 8,
+      "k": 2,
+      "chi2": "3183",
+      "cohens_w": "0.3990",
+      "zero_ratio": "2.330",
+      "passed": true,
+      "elapsed_s": 3
+    },
+    {
+      "name": "kron(A,I₂)+noise(σ=3) [FIX-B]",
+      "n": 8,
+      "k": 2,
+      "chi2": "508770",
+      "cohens_w": "5.0437",
+      "zero_ratio": "76.900",
+      "passed": false,
+      "elapsed_s": 4.9
+    },
+    {
+      "name": "kron(A,I₂)+U(Z_q) [FIX-C]",
+      "n": 8,
+      "k": 2,
+      "chi2": "3306",
+      "cohens_w": "0.4066",
+      "zero_ratio": "1.332",
+      "passed": true,
+      "elapsed_s": 3.6
+    },
+    {
+      "name": "U(Z_q) [CONTROL]",
+      "n": 8,
+      "k": 2,
+      "chi2": "3327",
+      "cohens_w": "0.4079",
+      "zero_ratio": "1.332",
+      "passed": true,
+      "elapsed_s": 3.6
+    }
+  ]
+}

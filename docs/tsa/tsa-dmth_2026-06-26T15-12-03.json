@@ -1,0 +1,36 @@
+{
+  "granted": 6,
+  "total": 6,
+  "results": [
+    {
+      "id": "lg-dmth-01",
+      "status": "OK",
+      "tsr_bytes": 1069
+    },
+    {
+      "id": "lg-dmth-02",
+      "status": "OK",
+      "tsr_bytes": 1069
+    },
+    {
+      "id": "lg-dmth-03",
+      "status": "OK",
+      "tsr_bytes": 1069
+    },
+    {
+      "id": "lg-dmth-04",
+      "status": "OK",
+      "tsr_bytes": 1070
+    },
+    {
+      "id": "lg-dmth-05",
+      "status": "OK",
+      "tsr_bytes": 1070
+    },
+    {
+      "id": "lg-dmth-06",
+      "status": "OK",
+      "tsr_bytes": 1069
+    }
+  ]
+}

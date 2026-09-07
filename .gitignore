@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+
+# Build / test artifacts
+coverage/
+dist/
+build/
+
+# Research papers (large binaries, external sources)
+paper/
+
+# Local env / logs
+.env
+*.log
+*.tmp
+
+# OS / editor
+.DS_Store
+Thumbs.db

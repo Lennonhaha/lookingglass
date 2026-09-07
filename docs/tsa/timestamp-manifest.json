@@ -1,0 +1,142 @@
+{
+  "project": "LookingGlass",
+  "description": "FIBEMATE 张量格陷门研究线 — 时间戳存证清单",
+  "created": "2026-06-26T19:52:00+08:00",
+  "updated": "2026-06-26T12:22:40.511Z",
+  "tsa_provider": "DigiCert",
+  "tsa_url": "http://timestamp.digicert.com",
+  "files": [
+    {
+      "id": "lg-001",
+      "path": "docs/lookingglass-36-green_2026-06-26.md",
+      "sha256": "C7F2E3F24812AB1436239E0AF0315E96FE77F26D55E6283E0C7C38FE486E1754",
+      "description": "36/36全绿测试报告"
+    },
+    {
+      "id": "lg-002",
+      "path": "docs/lookingglass-test-suite.md",
+      "sha256": "8BEBBA36FFC40F586CB2A4CA13AE8E3A57CD91A3A5F3C15C6BFD9275ECAB743F",
+      "description": "测试套件文档"
+    },
+    {
+      "id": "lg-003",
+      "path": "package.json",
+      "sha256": "EDB32439D7589C46DC19C9D0582B65262F987E4F0754133710E5DAC16E4B8F5B",
+      "description": "项目配置"
+    },
+    {
+      "id": "lg-004",
+      "path": "src/index.js",
+      "sha256": "38E37F42E656FFA0372A8C2ECBCAEA86FCC8B39E6CF78FC77CFE7FBCA8C626A9",
+      "description": "LookingGlass 入口模块"
+    },
+    {
+      "id": "lg-005",
+      "path": "src/core/tensor-ops.js",
+      "sha256": "21D3FA01AEDCA2159D52E32BCCDAAF412F06C4DE4D5B9064AB61453864413B79",
+      "description": "张量运算核心"
+    },
+    {
+      "id": "lg-006",
+      "path": "src/core/mirror-layer.js",
+      "sha256": "BEBFFF47B5CA498C7EE944C640E12723D815A8191D9A5809DDBC4A2FFF324C26",
+      "description": "单层镜子视角生成"
+    },
+    {
+      "id": "lg-007",
+      "path": "src/core/infinite-mirror.js",
+      "sha256": "40F1B70A7C873EBBA10159C16A8ADB83B774957D57B48443B9B24749A02A7C47",
+      "description": "无限嵌套镜子+攻击复杂度评估"
+    },
+    {
+      "id": "lg-008",
+      "path": "src/trapdoor/trapdoor-generator.js",
+      "sha256": "8EA32CE04FE00690B5D88784C40A701968C2CA79C036CF5EE77678C739E6ED67",
+      "description": "陷门生成器"
+    },
+    {
+      "id": "lg-009",
+      "path": "tests/tensor-ops.test.js",
+      "sha256": "633876BDD9128E5AB2EE51800396719C470AB7EE74EC326EBB2AB247E25553DE",
+      "description": "张量运算单元测试"
+    },
+    {
+      "id": "lg-010",
+      "path": "tests/trapdoor-generator.test.js",
+      "sha256": "705C19DAD33998A8AED1DFB798B69999E910CC18A026F6B1E17B9A0CE349411E",
+      "description": "陷门生成器测试"
+    },
+    {
+      "id": "lg-011",
+      "path": "tests/infinite-mirror.test.js",
+      "sha256": "05B9212AFA65B6C87426813CD0F52D082AFE63C23BC0698F08612ABF465B8F79",
+      "description": "无限镜子测试"
+    },
+    {
+      "id": "lg-012",
+      "path": "tests/kat.test.js",
+      "sha256": "45EFCB2A060E107411AEEEB8003E5A7CC748BFDACB43302E782A8A99343B57D5",
+      "description": "已知答案测试"
+    },
+    {
+      "id": "lg-013",
+      "path": "tests/integration.test.js",
+      "sha256": "06D7F03CA5571230DF851B8038DD0CDBE0A1CE85420B6D4139595F36AFC2BFD7",
+      "description": "集成测试"
+    },
+    {
+      "id": "lg-014",
+      "path": "tests/tvla-simulator.test.js",
+      "sha256": "76CCA615B104D748F1A19C0C87A06FAD79AEDE2322E52BFFB81D9B4F0E8B64B2",
+      "description": "TVLA侧信道模拟测试"
+    },
+    {
+      "id": "lg-015",
+      "path": "docs/performance-scheduler.md",
+      "sha256": "FAC0BC540D0DFE767EDCE0DC715E3D559A41D4CFFDC8E7980FE5CCB172961DE8",
+      "description": "性能调度器功能说明"
+    },
+    {
+      "id": "lg-016",
+      "path": "docs/performance-scheduler-code.md",
+      "sha256": "E80264F2F294FD854C08F5C71D86E6A0CE59362C55E4F6A0F24947D9EB704684",
+      "description": "性能调度器完整代码实现"
+    },
+    {
+      "id": "lg-017",
+      "path": "docs/lookingglass-equivocal-lwe-assessment.md",
+      "sha256": "F81A8321E39C4224B7762DFAD75F20DE474814239304EFB2B1C537037A42791C",
+      "description": "等变LWE安全假设评估报告"
+    },
+    {
+      "id": "lg-018",
+      "path": "docs/independence-experiment-results.json",
+      "sha256": "cf4400db5d313501706e1d03264dac1968e49a5b525d8b4d48b7974b12204e2d",
+      "description": "修复后混洗器独立性测试：7/7 PASS at α=0.01"
+    },
+    {
+      "id": "lg-019",
+      "path": "docs/mixer-randomization-results.json",
+      "sha256": "6d1fcb8c876b4cdfe06ce1a8022c71ae3089af36fe1f38e1b51f61f3ad42a35b",
+      "description": "混洗器随机化方案对比：FIX-A (kron random R) 和 FIX-C (uniform noise) 均通过"
+    },
+    {
+      "id": "lg-020",
+      "path": "docs/dmh-independence-fix_2026-06-26.md",
+      "sha256": "d8a0fd2bee0b6dd5e9a55c709fb8c1c9cb7ad358bced7504cde1563f83f4ff5b",
+      "description": "DMH统计独立性实验修复记录（I₂→R_rand, 7/7 PASS α=0.01）"
+    },
+    {
+      "id": "lg-021",
+      "path": "paper/paper_main.tex",
+      "sha256": "0d233dae46a526db54878368f20235a5d19f4738091cfd29171b0acf436034d0",
+      "description": "LookingGlass arXiv paper: DMH assumption + statistical validation (4pp, IEEEtran)"
+    },
+    {
+      "id": "lg-022",
+      "path": "paper/paper_main.pdf",
+      "sha256": "d55021573a6954a2b5863170e799e8339af8a8aed2b4bd73fca3ebf0cb8a893d",
+      "description": "LookingGlass PDF: 4pp compiled, zero LaTeX errors, Type 1 fonts"
+    }
+  ]
+}
