@@ -1,0 +1,7 @@
+# Python
+__pycache__/
+*.pyc
+
+# local debug / encoding-check scratch (not part of the framework)
+_probe.py
+_enc_check.cjs
