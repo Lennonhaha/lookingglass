@@ -70,12 +70,44 @@ sage sage/minrank_solver.sage
 结论：求解器正确检测到植入的公共核，且在无结构对照下不误报。
 这是**结构性 sanity check**，不是密码学强度结论。
 
-## 阶段 2（暂缓，待你决定）
+## 阶段 2（已落地骨架，2026-09-08）
 
-- 接 SNOVA / MAYO 前沿目标（CRYPTO 2026 Furue-Ikematsu 框架削参）
-- 接 lookingglass 的故障注入硬件靶场（STM32 + TVLA + ChipWhisperer 基础设施）
-  将故障注入结果桥接到 MinRank 求解器
-- 接 lattice-estimator（Albrecht-Player-Scott 2025）做 MinRank × LWE 跨方法对比基线
+> ⚠️ **阶段 2 严谨性声明**：以下新增均为**结构骨架 / 接口桩**，不是真实攻击实现，
+> 不产生任何密码学攻击数字。
+> - `lattice-estimator`（`estimator` 包）本机**装不上**（依赖 `fpylll`/`fplll` C++ 库，
+>   原生 Windows 无法编译）→ 改用**自写 BKZ 成本启发式**（Albrecht-Player-Scott 2015
+>   根 Hermite 因子 + 0.2075·β² 启发），**明确标注为独立再实现，非 `estimator` 包**。
+> - SNOVA / MAYO 以**秩缺陷签名**建模（MinRank 真正利用的属性），**非真实参数集**。
+> - `lg_fault_bridge.py` 是**惰性桩**（故意不执行注入），仅预留与 lookingglass
+>   LWE 故障模型的接线接口。
+> - 文献引用（PQCrypto 2024 / CRYPTO 2026 / IEICE / ePrint 2026/298）**本会话未独立核验**。
+
+| 文件 | 内容 | 诚实定位 |
+|------|------|----------|
+| `minrank_stage2.py` | SNOVA-like（大秩缺陷→MinRank 可解）+ MAYO-like（小缺陷→抗性更强）+ 随机对照 | 秩签名骨架 |
+| `lattice_baseline.py` | MinRank→格维度 `d=o·(n−r)` 的 BKZ 成本（APS 2015 启发式） | 自写再实现，非 `estimator` |
+| `lg_fault_bridge.py` | lookingglass LWE 故障→MinRank 缺陷的接线接口 | 惰性脑桩 |
+
+```powershell
+python minrank_stage2.py    # 前沿秩签名骨架（预期 rc=0，打印三段结果）
+python lattice_baseline.py  # BKZ 成本基线（教学用，非权威硬度）
+python lg_fault_bridge.py   # 惰性桩，打印 stub 标记
+```
+
+### 阶段 2 本机结果（GF(251)，toy 参数）
+
+`minrank_stage2.py`：
+- SNOVA-like（n=12,o=4,defect=3）→ 应 recovered=True（MinRank 找到植入核）
+- MAYO-like（n=12,o=4,defect=1）→ toy 参数下可能找到 dim-1（真实规模才是抗性来源）
+- random-like → recovered=False（无缺陷，正确不报）
+
+`lattice_baseline.py`：打印 `d=o·(n−r)` 与 β=40/60/80 的 log2 成本，仅作尺度对照。
+
+### 待办（不阻塞，按需推进）
+
+- 真实 `estimator` 包需在 WSL/ Linux 下 `pip install estimator`（本机原生 Windows 受限）
+- SNOVA/MAYO 升级为**真实参数集**需引用已核证文献（当前未核证，勿产攻击数字）
+- `lg_fault_bridge.py` 接入 lookingglass LWE 故障模型（STM32 + TVLA + ChipWhisperer）
 
 ## 参考
 
