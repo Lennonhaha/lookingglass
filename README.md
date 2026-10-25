@@ -31,3 +31,17 @@ field (`GPL-3.0-only`) is satisfied by that file.
 
 - `fibemate` — the PQC engineering-validation platform this research informs.
 - `lookingglass-v2` — related confusion / traffic-obfuscation research (Rust + WASM).
+
+## Negative Result Notice
+
+The depth-multiplicative trapdoor construction (DMTH) explored in this repository was
+later falsified. The failure analysis, model correction, and empirical data (LLL lattice
+reduction and χ² independence tests) are archived at
+[DOI: 10.5281/zenodo.23638522](https://doi.org/10.5281/zenodo.23638522).
+
+In short: the depth parameter does not appear in the attacker's view — the public key is a
+standard LWE instance — so “depth amplifies attack hardness” cannot hold; and the
+replacement hypothesis (“trapdoor structure complexity”) carries no reduction, with its
+metric being a formula rather than a measurement.
+
+*No security claim is made for this construction.*
